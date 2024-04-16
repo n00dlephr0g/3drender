@@ -1,0 +1,55 @@
+import math as m
+import vectors as v
+
+
+def zeros(xdimension, ydimension):
+    out=[]
+    boundx=range(0,xdimension)
+    boundy=range(0,ydimension)
+    for y in boundy:
+        out.append([])
+        for x in boundx:
+            out[y].append(0)
+    return out
+
+
+def identity(dimension):
+    out=[]
+    bound=range(0,dimension)
+    for y in bound:
+        out.append([])
+        for x in bound:
+            if x==y:
+                out[y].append(1)
+            else:
+                out[y].append(0)
+    return out
+
+
+def size(M):
+    return [len(M[0]),len(M)]
+
+
+def transpose(matrix):
+    inx=len(matrix[0])
+    iny=len(matrix)
+    out=[]
+    boundx=range(0,iny)
+    boundy=range(0,inx)
+    for y in boundy:
+        out.append([])
+        for x in boundx:
+            out[y].append(matrix[x][y])
+    return out
+
+
+def multiply(a,b):
+    [ax,ay]=size(a)
+    [bx,by]=size(b)
+    if ay!=bx:
+        raise Exception('matrices have invalid sizes for multiplication')
+    boundx=range(0,ax)
+    boundy=range(0,by)
+    for y in boundy:
+        for x in boundx:
+            
