@@ -64,7 +64,7 @@ def genLine(line,scale):
     out=""
     for i in line:
         for s in range(0,scale):
-            out=out+f"{i}"*2+' '
+            out=out+f"{i}"+' '
     return out
 
 def printFrame(frameout):

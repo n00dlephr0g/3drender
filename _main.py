@@ -24,9 +24,10 @@ while True:
         p.controlPlayer(pos0, angDir0, 2,3,0.02,init)
         init=False
         print('\n')
-        frame=rt.castRays([25,20],p.pos,p.direction,mesh,distance,90)
+        frame=rt.castRays([50,40],p.pos,p.direction,mesh,distance,90)
         frame=f.genAsciiFrame(frame)
         os.system('cls')
+        os.system('clear')
         print("position: ",v.roundVec(p.pos,2),"\ndirection: ", v.roundVec(p.direction,2))
         f.printFrame(frame)
     except KeyboardInterrupt:
