@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import math as m
 import time as t
 import elements as e
